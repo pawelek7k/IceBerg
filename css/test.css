@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@media (min-width: 1000px) {
+    .h1-test {
+        font-family: 'Poppins', sans-serif;
+        font-size: 45px;
+        font-weight: 200;
+
+    };
+
+    .h1-span-test {
+        color: aqua;
+    }
+
+    .hero-test-content {
+        padding: 70px;
+    }
+
+    .p-test {
+        color:rgb(118, 13, 13);
+    }
+
+    .introduction-test-p {
+        margin-top: 20px;
+        font-style: italic;
+    }
+
+    .quiz-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgb(19, 19, 19);
+        width: 600px;
+        margin: 0px auto;
+        padding: 50px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.143);
+        gap: 20px;
+    }
+
+    .previous-btn-test {
+        padding: 10px 30px;
+        border-radius: 25px;
+        border: none;
+        background-color: black;
+        color: aliceblue;
+        border: 1px solid rgba(255, 255, 255, 0.143);
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        letter-spacing: 1px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .next-btn-test {
+        padding: 10px 30px;
+        border-radius: 25px;
+        border: none;
+        font-size: 20px;
+        background-color: aliceblue;
+        color: black;
+        border: 1px solid rgba(255, 255, 255, 0.143);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        letter-spacing: 1px;
+        font-family: 'Poppins', sans-serif;
+        transition:0.3s;
+    }
+
+    .next-btn-test:hover {
+        color: aliceblue;
+    }
+
+.h2-test {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.previous-btn-test:hover,
+.next-btn-test:hover {
+  background: linear-gradient(90deg, #310404, #5a0303);
+}
+
+.previous-btn-test::before,
+.next-btn-test::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 50% 50%, #5a0303, #2a0606);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.previous-btn-test:hover::before,
+.next-btn-test:hover::before {
+  transform: translate(-50%, -50%) scale(4);
+  opacity: 1;
+}
+
+}
