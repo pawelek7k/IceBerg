@@ -943,6 +943,10 @@ line-height: 30px;
     border-bottom: 1px solid var(--border-color);
   }
 
+  .container-mobile-menu {
+    display: none;
+  }
+
   .main-logo {
     font-family: var(--font1);
     letter-spacing: 2px;
