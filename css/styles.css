@@ -6,6 +6,7 @@ body {
   background-color: var(--black);
   font-family: var(--main-font);
   color: var(--color-text);
+  margin-top: 100px;
 }
 
 * {
@@ -29,7 +30,15 @@ li {
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid var(--border-color);
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
 }
+
+
 .logo-header {
   display: flex;
   flex-direction: column;
@@ -188,6 +197,7 @@ li {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid var(--border-color);
+    z-index: 100;
   }
   .logo-header {
     display: flex;
@@ -197,14 +207,99 @@ li {
   }
 
   .hamburger-btn {
+    position: relative;
     display: block;
+    width: 30px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
     border: none;
-    width: 25px;
-    background-color: transparent;
+    margin-right: 10px;
   }
 
-  .hamburger-btn svg {
-    fill: var(--color-text);
+  .hamburger-btn .bar, .hamburger-btn:after, .hamburger-btn:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-text);
+    margin: 6px 0px;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+
+  .hamburger-btn.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+
+  .hamburger-btn.is-active:after {
+    transform: rotate(45deg) translate(-8px, -5px);
+  }
+
+  .hamburger-btn.is-active .bar {
+    opacity: 0;
+  }
+
+  .container-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 998;
+    background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.932) 12%, rgba(0, 0, 0, 0.977) 91%);
+    padding-top: 120px;
+    transition: 0.4s;
+    border-right: 1px solid var(--color-text);
+    padding: 100px 15px;
+    align-items: center;
+  }
+
+  .main-logo-mobile {
+    font-family: var(--font1);
+    letter-spacing: 2px;
+    color: var(--white);
+    font-size: 22px;
+  }
+
+  .main-logo-mobile > span {
+    color: var(--blood-red);
+    border-bottom: 1px solid var(--blood-red);
+  }
+
+  .logo-header-mobile {
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .container-mobile-menu.is-active {
+    left: 0;
+  }
+
+  .nav-header-mobile a {
+    display: block;
+    width: 100%;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: var(--deep-grey);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+    border-radius: 25px;
+  }
+
+  .nav-header-mobile a:hover {
+    background-color: var(--blood-red);
+    color: var(--white);
+    cursor: pointer;
   }
 
   .nav-header {
@@ -466,6 +561,25 @@ line-height: 30px;
   fill: var(--color-text);
 }
 
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.hamburger-btn.active-hamburger + .hamburger-menu {
+  display: flex;
+}
+
 }
 
 @media (min-width: 600px) {
@@ -484,12 +598,6 @@ line-height: 30px;
     margin-right: 10px;
   }
 
-  .hamburger-btn {
-    display: block;
-    border: none;
-    width: 25px;
-    background-color: transparent;
-  }
 
   .hamburger-btn svg {
     fill: var(--color-text);
@@ -756,6 +864,11 @@ line-height: 30px;
 }
 
 @media (min-width: 1000px) {
+
+  .header {
+    height: 80px;
+  }
+
   .third-container {
     padding: 0px 60px;
     display: flex;
@@ -809,17 +922,64 @@ line-height: 30px;
   .criminal-profilers-list svg {
     fill: var(--color-text);
   }
+
+  /* PODCASTS SECTION */
+
+
 }
 
 @media (min-width: 1200px) {
+
+  .container {
+    max-width: 1600px;
+  }
+
   .header {
     display: flex;
     justify-content: space-around;
     background-color: var(--black);
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     border-bottom: 1px solid var(--border-color);
   }
+
+  .main-logo {
+    font-family: var(--font1);
+    letter-spacing: 2px;
+    color: var(--white);
+    font-size: 22px;
+  }
+
+  .main-logo > span {
+    color: var(--blood-red);
+    border-bottom: 1px solid var(--blood-red);
+  }
+
+  .active-header div {
+    width: 120%;
+    height: 25px;
+    position: absolute;
+    background: #000000;
+    top:  35px;
+    left: -10px;
+    border-radius: 25px;
+    border-bottom: 1px solid red;
+  }
+
+  .a-logo-header {
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+
+  .header.sticky {
+    height: 80px;
+    background: #010000e3;
+    box-shadow: 0 1px 10px rgb(0, 0, 0);
+    margin-top: 0px;
+}
+
 
   .hamburger-btn {
     display: none;
@@ -843,29 +1003,6 @@ line-height: 30px;
   .active-header a {
     color: var(--white);
     font-weight: 600;
-  }
-
-  .active-header div {
-    width: 120%;
-    height: 30px;
-    position: absolute;
-    background-color: var(--black);
-    top:  25px;
-    left: -10px;
-    border-radius: 25px;
-    border-bottom: 1px solid red;
-  }
-
-  .main-logo {
-    font-family: var(--font1);
-    letter-spacing: 2px;
-    color: var(--white);
-    font-size: 22px;
-  }
-
-  .main-logo > span {
-    color: var(--blood-red);
-    border-bottom: 1px solid var(--blood-red);
   }
 
   .a-logo-header {
@@ -982,6 +1119,9 @@ line-height: 35px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-repeat: repeat-x;
+  background-position: right top;
+  background-attachment: fixed;
 }
 
 .third-container p {
@@ -1002,6 +1142,9 @@ line-height: 30px;
   gap: 60px;
   margin-top: 40px;
   flex-direction: row;
+  background-color: var(--deep-grey);
+  padding: 45px;
+  border-radius: 25px;
 }
 
 .criminal-profilers-list > h3 {
@@ -1009,6 +1152,7 @@ line-height: 30px;
   font-size: 35px;
   text-align: center;
   color: var(--blood-red);
+  margin-top: 20px;
 }
 
 .criminal-profilers-list ul h3 {
@@ -1018,17 +1162,36 @@ line-height: 30px;
 
 .criminal-profilers-list li {
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.criminal-profilers-list button {
+.learn-more-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-top: 15px;
 }
 
-.criminal-profilers-list svg {
+.learn-more-btn svg {
   fill: var(--color-text);
 }
+
+.content-third {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  border-radius: 25px;
+  align-items: center;
+  background: rgb(4,3,3);
+  background: linear-gradient(0deg, rgba(4,3,3,1) 48%, rgba(27,3,3,1) 91%);
+}
+
+/* .hidden-text {
+  display: none;
+  transition: opacity 0.5s ease;
+} */
 }
 
 @media (min-width: 1400px) {
@@ -1193,6 +1356,8 @@ line-height: 30px;
 .tab-content-active {
     display: block;
 }
+
+
 
 /* third-section */
 
