@@ -14,7 +14,7 @@
       <a href="#" class="main-logo">Ice<span>Berg</span></a>
       <a href="" class="a-logo-header">Najbrutalniejsze morderstwa</a>
     </div>
-    <button class="hamburger-btn" id="hamburger-btn">
+    <button class="hamburger-btn" id="hamburger-btn" type="button">
       <div class="bar"></div>
     </button>
 
@@ -36,11 +36,23 @@
     </div>
 
     <ul class="nav-header-mobile">
-      <li class="active-header"><a href="">Strona główna</a>
-        <div class="okok"></div>
-      </li>
+      <li class="active-header-mobile"><a href="">Strona główna</a>
       <li><a href="./test.html" class="effect">Test</a></li>
       <li><a href="" class="effect">Iceberg</a></li>
+    </ul>
+    <ul class="socials-mobile">
+      <li><a href=""><svg width="30" height="30" class="social-mobile">
+            <use href="./images/symbol-defs.svg#icon-twitter"></use>
+          </svg></a></li>
+      <li><a href=""><svg width="30" height="30" class="social-mobile">
+            <use href="./images/symbol-defs.svg#icon-youtube"></use>
+          </svg></a></li>
+      <li><a href=""><svg width="30" height="30" class="social-mobile">
+            <use href="./images/symbol-defs.svg#icon-instagram"></use>
+          </svg></a></li>
+      <li><a href=""><svg width="30" height="30" class="social-mobile">
+            <use href="./images/symbol-defs.svg#icon-facebook2"></use>
+          </svg></a></li>
     </ul>
   </div>
   <main>
@@ -48,7 +60,7 @@
       <div class="container hero-container">
         <div class="hero-main-content">
           <h1 class="index-h1">
-            Odsłona ludzkiej natury.
+            Odsłona <span>ludzkiej</span> natury.
           </h1>
           <div class="form-hero">
             <input type="search" id="search" name="search" placeholder="kim jesteśmy?" class="index-hero-input"
@@ -260,35 +272,64 @@
         </div>
       </div>
     </section>
-    <section class="podcasts-profiles-section">
+    <section class="podcasts-profiles-section section">
       <div class="container podcasts-container">
-        <h2>Najpopularniejsze polskie kanały podcastowe</h2>
+        <h2 class="index-h2">Najpopularniejsze polskie kanały podcastowe</h2>
+        <div class="podcasts-main-content">
+          <ul id="cards">
+            <li class="card"><a href="">
+                <div class="card-border"></div>
+                <div class="card-content">
+                  <h4>Kryminatorium</h4>
+                </div>
+              </a>
+            </li>
+            <li class="card"><a href="">
+                <div class="card-border"></div>
+                <div class="card-content">
+                  <h4>Polskie Zbrodnie</h4>
+                </div>
+              </a>
+            </li>
+            <li class="card"><a href="">
+                <div class="card-border"></div>
+                <div class="card-content">
+                  <h4>Oblicze zbrodni</h4>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div id="criminator" class="podcasts-cards">
+            <h3>Kryminatorium</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis molestiae, earum esse quas, ipsam
+              quisquam officia tempora nesciunt, consequuntur voluptatem inventore voluptate quaerat ratione iste
+              impedit debitis accusamus dolores sit?
+              Veritatis temporibus placeat iste tempore ullam aperiam doloremque, nulla repudiandae. Voluptates hic,
+              doloremque aliquam corrupti aspernatur nam perferendis nemo odio quidem error iusto, sapiente veritatis
+              deserunt impedit! Repudiandae, voluptatem impedit!
+              Impedit nulla, repellat tenetur deserunt delectus numquam illum nisi animi asperiores magnam maxime
+              consectetur eaque minus quo voluptatem deleniti minima! Tempora voluptatem sit dicta non eveniet
+              exercitationem recusandae. Incidunt, eum.
+              Delectus, maxime. Id assumenda libero delectus eligendi quaerat minima corrupti deserunt officia, ullam,
+              praesentium ab est voluptate tenetur voluptates saepe incidunt adipisci eius quasi ipsam possimus
+              veritatis itaque? Voluptatibus, accusantium?
+              Dicta minus voluptate labore quaerat a quos molestias fugiat magni vero ex nesciunt est voluptas,
+              reprehenderit culpa accusantium dolorem eveniet unde adipisci voluptatem facere obcaecati neque. Excepturi
+              perferendis ipsa incidunt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter-section section">
+      <div class="newsletter-container container">
+        <h2 class="index-h2">Newsletter</h2>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi ad optio laboriosam molestiae doloremque
+          architecto provident nostrum</h3>
+        <button class="super-button" type="submit">Subskrybuj </button>
       </div>
     </section>
   </main>
-  <div class="hamburger-menu">
-    <ul class="mobile-menu nav-mobile-menu">
-      <li class="li-menu-mobile">
-        <a href="./index.html" class="link mobile-a mobile-studio-a">Studio</a>
-      </li>
-      <li class="li-menu-mobile">
-        <a href="./portfolio.html" class="link mobile-a">Portfolio</a>
-      </li>
-      <li class="li-menu-mobile">
-        <a href="" class="link mobile-a">Contacts</a>
-      </li>
-    </ul>
-    <div class="down">
-      <ul class="mobile-menu">
-        <li class="li-menu-mobile">
-          <a href="tel:+110001111111" class="contact link mobile-a">+11 (000) 111-11-11</a>
-        </li>
-        <li class="li-menu-mobile">
-          <a href="mailto:info@devstudio.com" class="contact link mobile-a">info@devstudio.com</a>
-        </li>
-      </ul>
-    </div>
-    <script src="./js/script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
