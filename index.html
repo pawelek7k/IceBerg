@@ -56,6 +56,7 @@
     </ul>
   </div>
   <main>
+
     <section class="hero-section section">
       <div class="container hero-container">
         <div class="hero-main-content">
@@ -329,7 +330,7 @@
         <h2 class="index-h2">Newsletter</h2>
         <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi ad optio laboriosam molestiae doloremque
           architecto provident nostrum</h3>
-        <button class="super-button" type="submit">Subskrybuj </button>
+        <button class="super-button" type="submit" id="subscribtionBtn">Subskrybuj </button>
       </div>
     </section>
   </main>
@@ -364,6 +365,32 @@
       </div>
     </div>
   </footer>
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+
+    <div class="modal-content">
+      <div class="background">
+        <div class="background-subscribe">
+          <button type="button" class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+              height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6L6 18M6 6l12 12"></path>
+            </svg></button>
+          <h2 class="index-h2-modal">Subskrybuj po nowości kryminalne!</h2>
+        </div>
+      </div>
+      <div class="bottom-modal-cont">
+        <form class="subscribe-modal-form">
+          <label for="subscribe-email" class="subscribe-modal-label">
+            <input class="subscribe-modal-input" name="email" id="subscribe-email" type="email"
+              placeholder="Enter your email" required />
+          </label>
+
+          <button class="subscribe-modal-submit" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="./js/script.js"></script>
 </body>
 
